@@ -1,4 +1,4 @@
-# Abstraction-trialPython Appliance Management System (OOP Abstract Class Demo)
+# Python Appliance Management System (OOP Abstract Class Demo)
 A Python demonstration illustrating  (OOP) concepts, specifically Abstraction using Python's Built-in abc (Abstract Base Class) module.
 
 ## Project Overview
