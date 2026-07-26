@@ -1,0 +1,64 @@
+from fontTools.misc.textTools import caselessSort
+
+
+class Shape:
+    def area(self):
+        pass
+shape = Shape ()
+
+    #will produce 'none'
+
+from abc import ABC, abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+shape= Shape()
+
+#output would be type error because abstract can't be instantiated.
+
+from abc import ABC, abstractmethod
+class Appliance(ABC):
+    @abstractmethod
+    def turn_on(self):
+        pass
+    @abstractmethod
+    def turn_off(self):
+        pass
+
+class WashingMachine(Appliance):
+    def turn_on(self):
+        print("Washing Machine is on")
+
+    def turn_off(self):
+        print("Refrigerator is off")
+
+class Refrigerator(Appliance):
+    def turn_off(self):
+        print("Refrigerator is off")
+
+    def turn_on(self):
+        print("Refrigerator is on")
+
+class microwave(Appliance):
+    def turn_off(self):
+        print("Microwave is off")
+
+    def turn_on(self):
+        print("Microwave is on")
+
+washer = WashingMachine()
+refrigerator = Refrigerator()
+oven= microwave()
+
+print("Testing washing machine")
+washer.turn_on()
+washer.turn_off()
+print("\nTesting refrigerator")
+refrigerator.turn_on()
+refrigerator.turn_off()
+print("\nTesting microwave")
+oven.turn_on()
+oven.turn_off()
+
+
